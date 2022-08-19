@@ -55,30 +55,51 @@ public class App {
 
 
 
-        int [][] matrix = {
-                { -1,   2,   -3,    4,    5,    6,   -7},
-                {  8,  -9,   10,  -11,   12,  -13,  -14},
-                {-15,  16,  -17,   18,  -19,   20,  -21},
-                { -22, -23,  24,  -25,  -26,  -27,   28},
-                {29,  30,   31,   32,   33,   34,  35}
-        };
-        Scanner num = new Scanner(System.in);
-        System.out.println("Введите номер строки");
-        int a = num.nextInt();
-        if (a > matrix.length) {
-            System.out.println("Такой строки не существует ей будет присвоено число:  " + matrix.length);
-            a = matrix.length;
-        }
-        int b[] = matrix[a -1];
-        int c = 0;
-        for (int i = 0; i < b.length; ++i) {
-            if (b[i] < 0) {
-                c += 1;
+//        int [][] matrix = {
+//                { -1,   2,   -3,    4,    5,    6,   -7},
+//                {  8,  -9,   10,  -11,   12,  -13,  -14},
+//                {-15,  16,  -17,   18,  -19,   20,  -21},
+//                { -22, -23,  24,  -25,  -26,  -27,   28},
+//                {29,  30,   31,   32,   33,   34,  35}
+//        };
+//        Scanner num = new Scanner(System.in);
+//        System.out.println("Введите номер строки");
+//        int a = num.nextInt();
+//        if (a > matrix.length) {
+//            System.out.println("Такой строки не существует ей будет присвоено число:  " + matrix.length);
+//            a = matrix.length;
+//        }
+//        int b[] = matrix[a -1];
+//        int c = 0;
+//        for (int i = 0; i < b.length; ++i) {
+//            if (b[i] < 0) {
+//                c += 1;
+//
+//            }
+//
+//        }
+//        System.out.println(" количество отрицательных элементов: " + c);
 
+        int m = 4;
+        int n = 4;
+        int a = 1;
+        int[][] mn = new int[m][n];
+        for (int i = 0; i < mn.length; ++i) {
+
+            for (int j = 0; j < mn[i].length; ++j) {
+
+                mn[i][j] = a;
+//                ++a;
+                if ( i==j ) {
+                    System.out.println(a);
+
+                }
+            a++;
             }
 
         }
-        System.out.println(" количество отрицательных элементов: " + c);
+
+
     }
 
 }
